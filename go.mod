@@ -1,12 +1,12 @@
 module github.com/whitekid/echox
 
-go 1.19
+go 1.20
 
 require (
 	github.com/go-playground/validator/v10 v10.11.2
 	github.com/labstack/echo/v4 v4.10.0
 	github.com/stretchr/testify v1.8.1
-	github.com/whitekid/goxp v0.0.0-20230201045120-bb915fc9e980
+	github.com/whitekid/goxp v0.0.0-20230210162018-9fd69c66fc3b
 )
 
 require (
@@ -28,11 +28,11 @@ require (
 	go.uber.org/multierr v1.8.0 // indirect
 	go.uber.org/zap v1.24.0 // indirect
 	golang.org/x/crypto v0.5.0 // indirect
-	golang.org/x/exp v0.0.0-20230131160201-f062dba9d201 // indirect
-	golang.org/x/net v0.5.0 // indirect
+	golang.org/x/exp v0.0.0-20230206171751-46f607a40771 // indirect
+	golang.org/x/net v0.6.0 // indirect
 	golang.org/x/sync v0.1.0 // indirect
-	golang.org/x/sys v0.4.0 // indirect
-	golang.org/x/text v0.6.0 // indirect
+	golang.org/x/sys v0.5.0 // indirect
+	golang.org/x/text v0.7.0 // indirect
 	golang.org/x/time v0.2.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

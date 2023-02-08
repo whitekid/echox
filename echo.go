@@ -104,7 +104,7 @@ func Bind(c echo.Context, val interface{}) error {
 type Validator struct {
 }
 
-func (v *Validator) Validate(i interface{}) error {
+func (v *Validator) Validate(i any) error {
 	if err := validate.Struct(i); err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
