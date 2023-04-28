@@ -32,21 +32,21 @@ func TestRoute(t *testing.T) {
 	{
 		resp, err := request.Get("%s/app1/", ts.URL).Do(ctx)
 		require.NoError(t, err)
-		require.True(t, resp.Success(), "failed with status %v", resp.StatusCode)
+		require.NoErrorf(t, resp.Success(), "failed with status %v", resp.StatusCode)
 		require.Equal(t, "app1", resp.String())
 	}
 
 	{
 		resp, err := request.Get("%s/app2/", ts.URL).Do(ctx)
 		require.NoError(t, err)
-		require.True(t, resp.Success(), "failed with status %v", resp.StatusCode)
+		require.NoErrorf(t, resp.Success(), "failed with status %v", resp.StatusCode)
 		require.Equal(t, "app2", resp.String())
 	}
 
 	{
 		resp, err := request.Get("%s/api/app3/", ts.URL).Do(ctx)
 		require.NoError(t, err)
-		require.True(t, resp.Success(), "failed with status %v", resp.StatusCode)
+		require.NoErrorf(t, resp.Success(), "failed with status %v", resp.StatusCode)
 		require.Equal(t, "app3", resp.String())
 	}
 }
