@@ -3,7 +3,7 @@ module github.com/whitekid/echox
 go 1.22.4
 
 require (
-	github.com/go-playground/validator/v10 v10.21.0
+	github.com/go-playground/validator/v10 v10.22.0
 	github.com/labstack/echo/v4 v4.12.0
 	github.com/stretchr/testify v1.9.0
 	github.com/whitekid/goxp v0.0.0-20240426092859-15da1b47b3d4

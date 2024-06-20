@@ -18,7 +18,6 @@ func New(middlewares ...echo.MiddlewareFunc) *Echo {
 	e := echo.New()
 	e.HideBanner = true
 	e.Validator = &Validator{}
-	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 	e.Use(LogErrors())
 	e.Use(middlewares...)
