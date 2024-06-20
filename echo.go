@@ -37,7 +37,7 @@ func (e *Echo) Route(g *echo.Group, r Router) {
 // Middlewares
 
 // LogErrors log error when http status error occurred
-func LogErrors() echo.MiddlewareFunc { return LogErrorsWithCode(http.StatusBadGateway) }
+func LogErrors() echo.MiddlewareFunc { return LogErrorsWithCode(http.StatusInternalServerError) }
 func LogErrorsWithCode(logCode int) echo.MiddlewareFunc {
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		// log http errors
@@ -89,7 +89,7 @@ func ExtractParam(param string, callback func(c echo.Context, val string)) echo.
 }
 
 // Bind bind & validate
-func Bind(c echo.Context, val interface{}) error {
+func Bind[T any](c echo.Context, val *T) error {
 	if err := c.Bind(val); err != nil {
 		return echo.ErrBadRequest
 	}
