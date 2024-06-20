@@ -89,7 +89,7 @@ func ExtractParam(param string, callback func(c echo.Context, val string)) echo.
 }
 
 // Bind bind & validate
-func Bind(c echo.Context, val interface{}) error {
+func Bind[T any](c echo.Context, val *T) error {
 	if err := c.Bind(val); err != nil {
 		return echo.ErrBadRequest
 	}
